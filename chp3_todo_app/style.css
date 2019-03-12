@@ -1,0 +1,10 @@
+body{
+  background-color: #f7edc3;
+}
+#app ul {
+  list-style:none;
+}
+
+#app li .done{
+  text-decoration: line-through;
+}

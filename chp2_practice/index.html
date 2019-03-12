@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <p>{{ message }}</p>
+    <p v-if="toggle"><a v-bind:href="url" target="blank">link</a></p>    
+    <ul>
+      <li v-for="lng in languages">{{ lng }}</li>
+    </ul>
+    <button v-on:click="changeMessage">v-on</button>
+    <input type="text" v-model="message">
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

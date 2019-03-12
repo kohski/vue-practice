@@ -4,3 +4,4 @@ v-show
 v-for
 v-on
 v-model
+component
