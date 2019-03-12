@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-bind:value="message">
+    <hr>
+    <p v-if="toggle">v-if-practice</p>
+    <hr>
+    <p v-show="toggle2">v-show-practice</p>
+    <hr>
+    <ol>
+      <li v-for="color in colors">{{ color }}</li>
+    </ol>
+    <hr>
+    <ul>
+      <li v-for="(value,key) in user">
+        {{ key }} : {{ value }}
+      </li>
+      <p>(key,value)じゃなくて(value,key)なので注意</p>
+    </ul>
+    <hr>
+      <button v-on:click="onclick">v-if-display!</button>
+      <button v-on:click="onclick2">v-show-display!</button>
+    <hr>
+      <p><input type="text" v-model="comment"></p>
+      <p><input type="text" v-model="comment"></p>
+    <hr>
+      <hello-component></hello-component>
+      <hello-component></hello-component>
+      <hello-component></hello-component>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
