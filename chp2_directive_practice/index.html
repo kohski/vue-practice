@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <hr>
+    <p>mustache構文</p>
+    <p>{{ message }}</p>
+    
+    <hr>
+    <p>v-bilnd directive</p>
+    <input type="text" v-bind:value="message">
+
+    <hr>
+    <p>v-if directive</p>
+    <p v-if="toggle">{{ toggle }}</p>
+    <button v-on:click="toggleButton">convert disp</button>
+
+    <hr>
+    <p>v-show directive</p>
+    <p v-show="toggle2">v-show</p>
+    <button v-on:click="toggleButton2">convert disp</button>
+
+    <hr>
+    <p>v-for directive for array</p>
+    <ol>
+      <li v-for="color in colors">{{ color }}</li>
+    </ol>
+
+    <hr>
+      <p>v-for directive for object</p>
+      <ul>
+        <li v-for="(value,key) in user">
+          {{ key }} : {{ value }}
+        </li>
+      </ul>
+
+    <hr>
+      <p>v-on directive</p>
+      <p v-bind:class="bigsmall">test statment</p>
+      <button v-on:click="BigOrSmall">change</button>
+
+    <hr>
+      <p>v-model directive</p>
+      <input type="text" v-bind:value="comment">
+      <input type="text" v-model="comment">
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
