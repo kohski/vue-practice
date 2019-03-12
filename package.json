@@ -1,0 +1,22 @@
+{
+  "name": "vue_udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kohski/vue-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kohski/vue-practice/issues"
+  },
+  "homepage": "https://github.com/kohski/vue-practice#readme",
+  "devDependencies": {
+    "axios": "^0.18.0"
+  }
+}
