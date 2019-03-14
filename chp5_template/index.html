@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Template literal</h1>
+    <h2>v-once directive</h2>
+
+      <p v-once>{{ message }}</p>
+      <p>{{ message }}</p>    
+      <button v-on:click="clickHandler">
+        click!
+      </button>
+    <hr>
+    <h2>v-pre directive</h2>
+      <p>
+        {{ message }}
+      </p>
+      <p v-pre>
+        {{ message }}
+      </p>
+    <hr>
+    <h2>v-html directive</h2>
+      <p>{{ message2 }}</p>
+      <p v-html="message2"></p>
+    <hr>
+    <h2>v-cloak directive</h2>
+      <p v-cloak>{{ message }}</p>
+    <hr>
+    <h2>v-text directive</h2>
+      <p>
+        {{ message }}
+      </p>
+      <p v-text="message"></p>
+    <hr>
+
+
+    <h1>binding formula</h1>
+    <h2>JS formula</h2>
+      <p>
+        {{ message }}
+      </p>
+      <p>
+        {{ number + 1  }}
+      </p>
+      <p>
+        {{ message.split("").reverse().join("") }}
+      </p>
+      <p> 
+        {{ ok ? "YES" : "No" }}
+      </p>
+    <hr>
+    <h2>local & Global filter</h2>
+      <p>
+        {{ price | numberFormat }}
+      </p>
+      <input type="text" v-bind:value="price | numberFormat">
+    
+    <hr>
+    <h2>conbine filter</h2>
+        {{ price | toUSD | numberFormat }}
+    <hr>
+    <h2>filter arguments</h2>
+        {{ longText | readMore(20,"...")}}
+    <hr>
+    <h2>v-bind omission</h2>
+      <input type="text" v-bind:value="message"><br>
+      <input type="text" :value="message">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
