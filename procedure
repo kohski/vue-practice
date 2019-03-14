@@ -1,0 +1,9 @@
+axios,lodash,vueのセットアップ
+data,watch,methodsのせっと
+値はitem,keyword,message
+methodsにgetAnswer関数をセット
+  qiita apiより。paramsは別途定義
+createdeで呼び出し
+監視プロパティを作成
+debouncedGetAnswer()
+this.debouncedFetAnswer = _.debouncd(this.getAnswer,1000)ってかく・
