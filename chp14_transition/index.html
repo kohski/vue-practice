@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="show=!show">
+      change
+    </button>
+    <!-- transitionタグ内に適用。v-id/v-show両方OK -->
+    <transition>
+      <p v-if="show">
+        Hello Transition
+      </p>      
+    </transition>
+
+
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
