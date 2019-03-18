@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 基本事項 -->
+    <p>
+      Hello <span class="bg-gray text-blue" v-bind:class="{ large:isLarge,'text-danger':hasError }">Vue.js!</span>
+    </p>
+
+    <!-- 配列に入れて複数適用 -->
+    <p>Hello <span v-bind:class="[largeClass,dangerClass]">Vue.js</span></p>
+
+    <!-- classオブジェクトを定義 -->
+    <p>Hello <span v-bind:class="classObject">Vue.js</span></p>
+
+    <!-- 参考演算子もOK.配列の一要素にしておけば常に当たるクラスも指定可能 -->
+    <p>Hello <span v-bind:class="[isLarge? largeClass : '' ,dangerClass] ">Vue.js</span></p>
+
+    <!-- v-bind:styleでインラインスタイルを定義。style名に[-]はつけられないので、cmaelCaseにすること -->
+    <p>Hello <span v-bind:style="{ color:color, fontSize: fontSize + 'px' }">Vue.js</span></p>
+
+    <!-- styleについてもオブジェクトスタイルでの適用が可能 -->
+    <p>Hello <span v-bind:style="styleObject">Vue.js</span></p>    
+
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

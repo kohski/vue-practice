@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 基礎 / 要素自体をon/off renderingコストが高い-->
+    <p v-if="toggle">Yes</p>
+    <p v-else>No</p>
+
+    <!-- v-if/v-else-if/v-else -->
+    <p v-if="color ==='red'">stop</p>
+    <p v-else-if=" color ==='yellow'">caution</p>
+    <p v-else-if=" color === 'blue'">go</p>
+    <p v-else>Not blue/yellow/red</p>
+
+    <!-- displayのon/off => renderingコスト低い -->
+    <p v-show="showToggle">Hello Vue.js</p>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
