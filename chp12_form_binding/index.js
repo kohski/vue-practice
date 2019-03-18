@@ -9,7 +9,4 @@ var app = new Vue({
     selecteds:[],
     age:0
   },
-
-
-
 })
