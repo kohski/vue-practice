@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <p>
+      {{ counter }}
+    </p>
+    <p>
+      {{ message }}
+    </p>
+    <!-- inline method -->
+    <!-- <button v-on:click="{ counter++ }">increment</button> -->
+
+    <!-- methods利用 -->
+    <button v-on:click="clickHandler($event,'Vue.js')">increment</button>
+
+    <!-- .once修飾子(event修飾子によりeventを変えられる) -->
+    <p>
+      {{ nowStr }}
+    </p>
+    <button v-on:click.once="clickHandler2()">Now</button>
+
+    <!-- キー修飾子 -->
+    <br>
+    <br>
+    <input type="text" v-model="message2" v-on:keyup.esc.space.up="clear">
+    <p>
+      {{ message2 }}
+    </p>
+
+    <!-- システム修飾子 -->
+    <br>
+    <br>
+    <input type="text" v-model="message2" v-on:keyup.ctrl.67="clear">
+    <p>
+      {{ message2 }}
+    </p>
+    
+    <div v-on:click.shift="clickHandler3">
+      click me
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
