@@ -25,7 +25,7 @@
     </p>
     <button v-on:click.once="clickHandler2()">Now</button>
 
-    <!-- キー修飾子 -->
+    <!-- キー修飾子( どれか押したら発火 ) -->
     <br>
     <br>
     <input type="text" v-model="message2" v-on:keyup.esc.space.up="clear">
@@ -33,7 +33,7 @@
       {{ message2 }}
     </p>
 
-    <!-- システム修飾子 -->
+    <!-- システム修飾子( 同時に押したら発火 ) -->
     <br>
     <br>
     <input type="text" v-model="message2" v-on:keyup.ctrl.67="clear">
@@ -44,6 +44,10 @@
     <div v-on:click.shift="clickHandler3">
       click me
     </div>
+
+    <!-- 省略記法 -->
+    <button v-on:click="clickHandler3"></button>
+    <button @click="clickHandler3"></button>
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
